@@ -1,0 +1,31 @@
+import random
+
+number = random.randint(1,100)
+
+print("you only have 7 attempts to guess the number")
+
+guess = int(input("pick a number from 1 to 100:"))
+
+attempts = 7
+
+while attempts > 0:
+
+    if guess > number:
+        print("CHOOSE A MORE LOWER NUMBER")
+    
+    elif guess < number:
+        print("CHOOSE A MORE HIGHER NUMBER")
+
+    else:
+        print("CONGRATULATIONS!! YOU WON🥳")
+        break
+
+    attempts = attempts - 1     
+
+    guess = int(input("TRY AGAIN:"))
+    print("ATTEMPTS LEFT:",attempts)
+
+           
+
+if attempts == 0 and guess != number:
+    print("☠️GAME OVER! THE NUMBER WAS =", number)    
